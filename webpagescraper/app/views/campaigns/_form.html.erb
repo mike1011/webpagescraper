@@ -1,0 +1,27 @@
+
+<%= form_for(@campaign,:url=>campaigns_path) do |f| %>
+<fieldset>
+
+<!-- Form Name -->
+<legend>Webpage Scrapper</legend>
+<!-- Text input-->
+<div class="form-group row">
+  <label class="col-md-4 control-label" for="textinput">Enter the Url</label>  
+  <div class="col-md-4">
+    <%= f.text_field :url,:class=>"form-control input-md" ,:value=>"https://fundly.com/search/%60"%>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group row">
+  <label class="col-md-4 control-label" for="singlebutton">Scrape the webpage</label>
+  <div class="col-md-4">
+    <button id="singlebutton" type="submit" name="singlebutton" class="btn btn-primary">Submit</button>
+  </div>
+</div>
+
+</fieldset>
+<%end%>
+
+
+

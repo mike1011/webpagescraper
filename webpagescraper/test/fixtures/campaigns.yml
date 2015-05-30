@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  other_links: MyString
+  owner: MyString
+  category: MyString
+  raised_amount: MyString
+  total_amount: MyString
+
+two:
+  title: MyString
+  description: MyText
+  other_links: MyString
+  owner: MyString
+  category: MyString
+  raised_amount: MyString
+  total_amount: MyString

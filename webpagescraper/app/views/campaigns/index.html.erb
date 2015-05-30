@@ -1,0 +1,41 @@
+<%if @campaigns.present?%>
+<div class="table-responsive">
+  <table class="table table-condensed table-striped table-bordered table-hover no-margin">
+   <p class="lead text-center">Details from <%= @webpage_title%></p>
+   <thead>
+      <tr>
+         <th>Campaign Title</th>
+         <th>Campaign Owner</th>
+         <th>Category</th>
+         <th>Raised Amount</th>
+         <th>Total Amount</th>
+         
+      </tr>
+   </thead>
+   <tbody>
+    <!-- show all owners and iterating  -->
+    <%@campaigns.each do |i|%> 
+      <tr>
+         <td><%= i.try(:title)%></td>
+         <td><%= i.try(:owner)%></td>
+         <td><%= i.try(:category)%></td>
+         <td><%= i.try(:raised_amount)%></td>
+         <td><%= i.try(:total_amount)%></td>
+       </tr>
+<!-- displaying directly from view without saving in db using @final_array
+         <td><#%= @final_array[0][0][index]%></td>
+         <td><#%= @final_array[0][1][index]%></td>
+         <td><#%= @final_array[0][2][index]%></td>
+         <td><#%= @final_array[0][3][index].split("/").first%></td>
+         <td><#%= @final_array[0][3][index].split("/").second%></td>    -->    
+      <%end%>
+   </tbody>
+</table>
+
+<%else%>
+
+<p>Sorry,Nothing Found</p>
+</div>
+<%end%>
+
+
